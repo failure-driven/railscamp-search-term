@@ -5,7 +5,7 @@ RSpec.feature "Games", type: :feature, js: true do
     visit '/'
     expect(page).to have_content 'Welcome to the Game'
 
-    page.find('button').click
+    page.find('[data-start-button]').click
     pending("Haven't written any rounds yet")
     expect(page).to have_content 'This is round 1'
   end

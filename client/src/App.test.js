@@ -17,8 +17,9 @@ it('renders welcome message', () => {
   expect(shallowToJson(wrapper)).toMatchSnapshot();
 });
 
-it('renders a button', () => {
-  const wrapper = shallow(<App />);
-  const button = <button>Start Game</button>;
-  expect(wrapper.contains(button)).toEqual(true);
-});
+describe('button', () => {
+  it('takes you to round 1 on click', () => {
+    const wrapper = shallow(<App/>);
+    expect(wrapper.find('[data-start-button]').prop('href')).toEqual('/rounds/1')
+  });
+})

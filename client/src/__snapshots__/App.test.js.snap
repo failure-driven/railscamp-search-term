@@ -10,9 +10,12 @@ exports[`renders welcome message 1`] = `
     <h2>
       Welcome to the Game
     </h2>
-    <button>
+    <a
+      data-start-button={true}
+      href="/rounds/1"
+    >
       Start Game
-    </button>
+    </a>
   </header>
 </div>
 `;
