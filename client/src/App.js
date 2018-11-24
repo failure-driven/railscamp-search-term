@@ -11,8 +11,8 @@ class App extends Component {
         <header className="App-header">
           <BrowserRouter>
             <Switch>
-              <Route path="/" exact={true} component={Welcome} />
-              <Route path="/rounds/1" exact={true} component={Round} />
+              <Route path="/" exact component={Welcome} />
+              <Route path="/rounds/1" exact component={Round} />
             </Switch>
           </BrowserRouter>
         </header>

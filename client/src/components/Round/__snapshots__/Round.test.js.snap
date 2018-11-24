@@ -1,7 +1,23 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`renders img 1`] = `
+<Fragment>
+  <h2>
+    This is round 1
+  </h2>
+  <img
+    src=""
+  />
+</Fragment>
+`;
+
 exports[`renders welcome message 1`] = `
-<h2>
-  This is round 1
-</h2>
+<Fragment>
+  <h2>
+    This is round 1
+  </h2>
+  <img
+    src=""
+  />
+</Fragment>
 `;

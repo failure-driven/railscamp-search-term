@@ -9,3 +9,9 @@ it('renders welcome message', () => {
   expect(wrapper.contains(round)).toEqual(true);
   expect(shallowToJson(wrapper)).toMatchSnapshot();
 });
+
+it('renders img', () => {
+  const wrapper = shallow(<Round />);
+  expect(wrapper.find('img').prop('src')).toEqual('');
+  expect(shallowToJson(wrapper)).toMatchSnapshot();
+});

@@ -1,5 +1,8 @@
 import React from 'react'
 
 export default () => (
-  <h2>This is round 1</h2>
+  <>
+    <h2>This is round 1</h2>
+    <img src=""/>
+  </>
 )
