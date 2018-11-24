@@ -7,15 +7,20 @@ exports[`renders welcome message 1`] = `
   <header
     className="App-header"
   >
-    <h2>
-      Welcome to the Game
-    </h2>
-    <a
-      data-start-button={true}
-      href="/rounds/1"
-    >
-      Start Game
-    </a>
+    <BrowserRouter>
+      <Switch>
+        <Route
+          component={[Function]}
+          exact={true}
+          path="/"
+        />
+        <Route
+          component={[Function]}
+          exact={true}
+          path="/rounds/1"
+        />
+      </Switch>
+    </BrowserRouter>
   </header>
 </div>
 `;

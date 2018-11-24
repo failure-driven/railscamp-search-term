@@ -1,4 +1,7 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
+import {BrowserRouter, Switch, Route } from 'react-router-dom';
+import Welcome from './components/Welcome'
+import Round from './components/Round'
 import './App.css';
 
 class App extends Component {
@@ -6,8 +9,12 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <h2>Welcome to the Game</h2>
-          <a href="/rounds/1" data-start-button>Start Game</a>
+          <BrowserRouter>
+            <Switch>
+              <Route path="/" exact={true} component={Welcome} />
+              <Route path="/rounds/1" exact={true} component={Round} />
+            </Switch>
+          </BrowserRouter>
         </header>
       </div>
     );
@@ -15,3 +22,4 @@ class App extends Component {
 }
 
 export default App;
+

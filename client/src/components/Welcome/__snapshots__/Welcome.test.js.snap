@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders welcome message 1`] = `
+<div>
+  <h2>
+    Welcome to the Game
+  </h2>
+  <a
+    data-start-button={true}
+    href="/rounds/1"
+  >
+    Start Game
+  </a>
+</div>
+`;
