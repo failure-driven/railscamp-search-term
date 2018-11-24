@@ -1,0 +1,1 @@
+Client: cd client && PORT=9091 yarn start

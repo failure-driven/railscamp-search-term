@@ -11,6 +11,20 @@ Ensure `foreman` is installed, then:
 By default the app will be reachable at `localhost:5100` (set by `foreman`),
 but `PUBLIC_PORT` will override this port if set.
 
+## Testing
+
+To run tests, ensure that foreman is running using:
+
+```
+foreman start --procfile=Procfile.test
+```
+
+and then run:
+
+```
+rspec
+```
+
 ## ...
 
 This README would normally document whatever steps are necessary to get the
