@@ -16,3 +16,9 @@ it('renders welcome message', () => {
   expect(wrapper.contains(welcome)).toEqual(true);
   expect(shallowToJson(wrapper)).toMatchSnapshot();
 });
+
+it('renders a button', () => {
+  const wrapper = shallow(<App />);
+  const button = <button>Start Game</button>;
+  expect(wrapper.contains(button)).toEqual(true);
+});

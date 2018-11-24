@@ -10,6 +10,9 @@ exports[`renders welcome message 1`] = `
     <h2>
       Welcome to the Game
     </h2>
+    <button>
+      Start Game
+    </button>
   </header>
 </div>
 `;
