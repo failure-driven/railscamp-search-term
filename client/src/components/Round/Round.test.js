@@ -12,6 +12,6 @@ it('renders welcome message', () => {
 
 it('renders img', () => {
   const wrapper = shallow(<Round />);
-  expect(wrapper.find('img').prop('src')).toEqual('');
+  expect(wrapper.find('img').prop('src')).toEqual('http://localhost:5000/8e85e82e854.gif');
   expect(shallowToJson(wrapper)).toMatchSnapshot();
 });

@@ -6,7 +6,7 @@ exports[`renders img 1`] = `
     This is round 1
   </h2>
   <img
-    src=""
+    src="http://localhost:5000/8e85e82e854.gif"
   />
 </Fragment>
 `;
@@ -17,7 +17,7 @@ exports[`renders welcome message 1`] = `
     This is round 1
   </h2>
   <img
-    src=""
+    src="http://localhost:5000/8e85e82e854.gif"
   />
 </Fragment>
 `;
