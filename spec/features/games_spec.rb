@@ -8,7 +8,6 @@ RSpec.feature "Games", type: :feature, js: true do
     page.find('[data-start-button]').click
     expect(page).to have_content 'This is round 1'
     expect(page).to have_selector('img')
-    pending 'no text area yet'
     expect(page).to have_selector('textarea')
   end
 end

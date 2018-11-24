@@ -8,10 +8,11 @@ exports[`renders img 1`] = `
   <img
     src="http://localhost:5000/8e85e82e854.gif"
   />
+  <textarea />
 </Fragment>
 `;
 
-exports[`renders welcome message 1`] = `
+exports[`renders renders a text area 1`] = `
 <Fragment>
   <h2>
     This is round 1
@@ -19,5 +20,18 @@ exports[`renders welcome message 1`] = `
   <img
     src="http://localhost:5000/8e85e82e854.gif"
   />
+  <textarea />
+</Fragment>
+`;
+
+exports[`renders round one message 1`] = `
+<Fragment>
+  <h2>
+    This is round 1
+  </h2>
+  <img
+    src="http://localhost:5000/8e85e82e854.gif"
+  />
+  <textarea />
 </Fragment>
 `;
