@@ -7,6 +7,8 @@ RSpec.feature "Games", type: :feature, js: true do
 
     page.find('[data-start-button]').click
     expect(page).to have_content 'This is round 1'
+    pending "waiting to do the img"
+    expect(page).to have_selector('img')
   end
 end
 
