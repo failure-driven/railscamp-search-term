@@ -21,3 +21,9 @@ it('renders renders a text area', () => {
   expect(wrapper.find('textarea').exists()).toBe(true);
   expect(shallowToJson(wrapper)).toMatchSnapshot();
 });
+
+it('renders a status', () => {
+  const wrapper = shallow(<Round />);
+  expect(wrapper.find('.status').exists()).toBe(true);
+  expect(shallowToJson(wrapper)).toMatchSnapshot();
+});
