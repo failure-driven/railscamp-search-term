@@ -12,13 +12,31 @@ RSpec.feature "Games", type: :feature, js: true do
       expect(page).to have_content 'This is round 1'
       expect(page).to have_selector('img')
       expect(page).to have_selector('textarea')
+    end
+
+    When 'the wrong answer is filled in' do
       page.find("textarea").fill_in(with: "Michael")
+    end
+
+    Then 'the round is still in progress' do
       expect(page).to_not have_content "CORRECT"
       expect(page).to_not have_content "NEXT"
+    end
+
+    When 'the correct answer is filled in' do
       page.find("textarea").fill_in(with: "Matt")
+    end
+
+    Then 'the round is completed' do
       expect(page).to have_content "CORRECT"
       expect(page).to have_content('NEXT')
+    end
+
+    When 'the next button is clicked' do
       page.find("[data-test-next]").click
+    end
+
+    Then 'round two commences' do
       expect(page).to have_content 'This is round 2'
       expect(page.find("textarea").value).to eq ""
     end
