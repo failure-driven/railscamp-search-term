@@ -23,15 +23,38 @@ it('renders renders a text area', () => {
   expect(shallowToJson(wrapper)).toMatchSnapshot();
 });
 
-it('renders a status', () => {
+describe('guess comparator module', () => {
   const wrapper = shallow(<Round />);
-  expect(wrapper.find('.status').text()).toEqual('');
 
-  wrapper.find('textarea').simulate('change', { target: { value: 'michael' }});
+  it('should be incorrect if not the right subject', () => {
+    expect(wrapper.find('.status').text()).toEqual('');
 
-  expect(wrapper.find('.status').text()).toEqual('');
+    wrapper.find('textarea').simulate('change', { target: { value: 'michael' }});
 
-  wrapper.find('textarea').simulate('change', { target: { value: 'matt' }});
+    expect(wrapper.find('.status').text()).toEqual('');
+  });
 
-  expect(wrapper.find('.status').text()).toEqual('CORRECT');
-});
+  it('should be correct when the right subject has been guessed', () => {
+    wrapper.find('textarea').simulate('change', { target: { value: 'matt' }});
+
+    expect(wrapper.find('.status').text()).toEqual('CORRECT');
+  });
+
+  it('should be correct when the right subject has been guessed on multiple lines', () => {
+    wrapper.find('textarea').simulate('change', { target: { value: 'Cat\nMatt' }});
+
+    expect(wrapper.find('.status').text()).toEqual('CORRECT');
+  });
+
+  it('should not be correct when the subject is part of the guess comparator input', () => {
+    wrapper.find('textarea').simulate('change', { target: { value: 'Tomatthey' }});
+
+    expect(wrapper.find('.status').text()).toEqual('');
+  });
+
+  it('should be correct when the right subject has been guessed with mixed case', () => {
+    wrapper.find('textarea').simulate('change', { target: { value: 'mAtT' }});
+
+    expect(wrapper.find('.status').text()).toEqual('CORRECT');
+  });
+})

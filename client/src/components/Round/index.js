@@ -14,9 +14,10 @@ class Round extends Component {
   }
 
   handleGuess(event) {
-    console.log(event)
-    if (event.target.value === 'matt') {
+    if (event.target.value.match(/^matt$/im)) {
       this.setState({ status: 'CORRECT' });
+    } else {
+      this.setState({ status: '' });
     }
   }
 

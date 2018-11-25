@@ -11,7 +11,7 @@ RSpec.feature "Games", type: :feature, js: true do
     expect(page).to have_selector('textarea')
     page.find("textarea").fill_in(with: "Michael")
     expect(page).to_not have_content "CORRECT"
-    page.find("textarea").fill_in(with: "matt")
+    page.find("textarea").fill_in(with: "Matt")
     expect(page).to have_content "CORRECT"
   end
 end
