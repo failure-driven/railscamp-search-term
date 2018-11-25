@@ -11,8 +11,10 @@ RSpec.feature "Games", type: :feature, js: true do
     expect(page).to have_selector('textarea')
     page.find("textarea").fill_in(with: "Michael")
     expect(page).to_not have_content "CORRECT"
+    expect(page).to_not have_content "NEXT"
     page.find("textarea").fill_in(with: "Matt")
     expect(page).to have_content "CORRECT"
+    expect(page).to have_content('NEXT')
   end
 
   context 'Guess name given data for Keith' do

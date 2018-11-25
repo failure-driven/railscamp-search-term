@@ -29,6 +29,8 @@ class Round extends Component {
       <img src="http://localhost:5000/8e85e82e854.gif"/>
       <textarea autofocus="true" onChange={this.handleGuess}>
       </textarea>
+      { (this.state.status === 'CORRECT') ?
+        <button>NEXT</button> : ''}
     </>
     );
   }

@@ -39,6 +39,16 @@ describe('guess comparator module', () => {
 
     expect(wrapper.find('.status').text()).toEqual('CORRECT');
   });
+  it('should display the "next" button when the right subject has been guessed', () => {
+    wrapper.find('textarea').simulate('change', { target: { value: 'matt' }});
+
+    expect(wrapper.find('button').text()).toEqual('NEXT');
+  });
+  it('should display the no button if the right subject has not been guessed', () => {
+    wrapper.find('textarea').simulate('change', { target: { value: 'max' }});
+
+    expect(wrapper.find('button').exists()).toBe(false);
+  });
 
   it('should be correct when the right subject has been guessed on multiple lines', () => {
     wrapper.find('textarea').simulate('change', { target: { value: 'Cat\nMatt' }});
