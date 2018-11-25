@@ -73,6 +73,9 @@ class Round extends Component {
       <>
       <div className='status'>{this.state.status}</div>
       <h2>This is round {this.state.round}</h2>
+        <p>Guess who the werewolf is in this GIF
+          <br />
+          (besides Michael and Selena)</p>
       <div>{this.state.timer > 0 ? ('' + this.state.timer + ' sec left') : 'boom'}</div>
       <img src="http://localhost:5000/8e85e82e854.gif"/>
       <textarea ref={el => this.textarea = el} onChange={this.handleGuess} value={this.state.guess} disabled={this.state.status === 'CORRECT'} autoFocus={true}>

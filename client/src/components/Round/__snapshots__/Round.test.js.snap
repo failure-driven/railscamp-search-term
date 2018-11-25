@@ -9,6 +9,11 @@ exports[`renders img 1`] = `
     This is round 
     1
   </h2>
+  <p>
+    Guess who the werewolf is in this GIF
+    <br />
+    (besides Michael and Selena)
+  </p>
   <div>
     10 sec left
   </div>
@@ -33,6 +38,11 @@ exports[`renders renders a text area 1`] = `
     This is round 
     1
   </h2>
+  <p>
+    Guess who the werewolf is in this GIF
+    <br />
+    (besides Michael and Selena)
+  </p>
   <div>
     10 sec left
   </div>
@@ -57,6 +67,11 @@ exports[`renders round one message 1`] = `
     This is round 
     1
   </h2>
+  <p>
+    Guess who the werewolf is in this GIF
+    <br />
+    (besides Michael and Selena)
+  </p>
   <div>
     10 sec left
   </div>
