@@ -5,7 +5,7 @@ RSpec.feature "Games", type: :feature, js: true do
     When 'a user starts the game' do
       visit '/'
       expect(page).to have_content 'Welcome to the Game'
-      page.find('[data-start-button]').click
+      focus_on(:welcome).start_game
     end
 
     Then 'the game commences' do
