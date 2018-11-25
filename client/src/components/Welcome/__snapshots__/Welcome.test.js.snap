@@ -5,11 +5,12 @@ exports[`renders welcome message 1`] = `
   <h2>
     Welcome to the Game
   </h2>
-  <a
+  <Link
     data-start-button={true}
-    href="/rounds/1"
+    replace={false}
+    to="/rounds/1"
   >
     Start Game
-  </a>
+  </Link>
 </div>
 `;

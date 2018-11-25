@@ -15,8 +15,7 @@ RSpec.feature "Games", type: :feature, js: true do
     page.find("textarea").fill_in(with: "Matt")
     expect(page).to have_content "CORRECT"
     expect(page).to have_content('NEXT')
-    page.find("button").click
-    pending "round 2 does not work"
+    page.find("[data-test-next]").click
     expect(page).to have_content 'This is round 2'
   end
 

@@ -6,7 +6,8 @@ exports[`renders img 1`] = `
     className="status"
   />
   <h2>
-    This is round 1
+    This is round 
+    1
   </h2>
   <img
     src="http://localhost:5000/8e85e82e854.gif"
@@ -24,7 +25,8 @@ exports[`renders renders a text area 1`] = `
     className="status"
   />
   <h2>
-    This is round 1
+    This is round 
+    1
   </h2>
   <img
     src="http://localhost:5000/8e85e82e854.gif"
@@ -42,7 +44,8 @@ exports[`renders round one message 1`] = `
     className="status"
   />
   <h2>
-    This is round 1
+    This is round 
+    1
   </h2>
   <img
     src="http://localhost:5000/8e85e82e854.gif"

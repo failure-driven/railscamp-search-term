@@ -17,7 +17,7 @@ exports[`renders welcome message 1`] = `
         <Route
           component={[Function]}
           exact={true}
-          path="/rounds/1"
+          path="/rounds/:round"
         />
       </Switch>
     </BrowserRouter>

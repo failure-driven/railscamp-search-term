@@ -1,16 +1,24 @@
-import React, {Component} from 'react'
+import React, {Component} from 'react';
+import { Link } from 'react-router-dom';
 
 class Round extends Component {
   constructor(props) {
     super(props);
 
+    const round = parseInt(props.match.params.round, 10);
     this.props = props;
 
     this.state = {
-      status: ''
+      status: '',
+      round,
     };
 
     this.handleGuess = this.handleGuess.bind(this);
+  }
+
+  componentWillReceiveProps(props) {
+    const round = parseInt(props.match.params.round, 10);
+    this.setState({ round });
   }
 
   handleGuess(event) {
@@ -25,12 +33,12 @@ class Round extends Component {
     return(
       <>
       <div className='status'>{this.state.status}</div>
-      <h2>This is round 1</h2>
+      <h2>This is round {this.state.round}</h2>
       <img src="http://localhost:5000/8e85e82e854.gif"/>
       <textarea autofocus="true" onChange={this.handleGuess}>
       </textarea>
       { (this.state.status === 'CORRECT') ?
-        <button>NEXT</button> : ''}
+        <Link to={`/rounds/${this.state.round + 1}`} data-test-next>NEXT</Link> : ''}
     </>
     );
   }
