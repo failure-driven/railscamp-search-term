@@ -12,9 +12,14 @@ class Round extends Component {
       status: '',
       round,
       guess: '',
+      timer: 10,
     };
 
     this.handleGuess = this.handleGuess.bind(this);
+    this.startTimer = this.startTimer.bind(this);
+    this.tick = this.tick.bind(this);
+
+    this.startTimer();
   }
 
   static getDerivedStateFromProps(props, state) {
@@ -23,7 +28,8 @@ class Round extends Component {
       return {
         round: currentRound,
         status: '',
-        guess: ''
+        guess: '',
+        timer: 10,
       }
     }
     return state
@@ -42,11 +48,32 @@ class Round extends Component {
     }
   }
 
+  startTimer() {
+    const { interval } = this.state;
+    if (interval) {
+      return
+    } else {
+      const interval = setInterval(this.tick, 1000);
+      this.setState({ interval });
+    }
+  }
+
+  tick() {
+    const { timer, interval } = this.state;
+    if (timer <= 0) {
+      clearInterval(interval);
+      this.setState({ interval: null });
+    } else {
+      this.setState({ timer: timer - 1 });
+    }
+  }
+
   render() {
     return(
       <>
       <div className='status'>{this.state.status}</div>
       <h2>This is round {this.state.round}</h2>
+      <div>{this.state.timer > 0 ? ('' + this.state.timer + ' sec left') : 'boom'}</div>
       <img src="http://localhost:5000/8e85e82e854.gif"/>
       <textarea ref={el => this.textarea = el} onChange={this.handleGuess} value={this.state.guess} disabled={this.state.status === 'CORRECT'} autoFocus={true}>
       </textarea>
