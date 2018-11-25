@@ -1,23 +1,27 @@
 require 'rails_helper'
 
 RSpec.feature "Games", type: :feature, js: true do
-  scenario 'Visiting the game' do
-    visit '/'
-    expect(page).to have_content 'Welcome to the Game'
+  scenario 'Playing the game' do
+    When 'a user starts the game' do
+      visit '/'
+      expect(page).to have_content 'Welcome to the Game'
+      page.find('[data-start-button]').click
+    end
 
-    page.find('[data-start-button]').click
-    expect(page).to have_content 'This is round 1'
-    expect(page).to have_selector('img')
-    expect(page).to have_selector('textarea')
-    page.find("textarea").fill_in(with: "Michael")
-    expect(page).to_not have_content "CORRECT"
-    expect(page).to_not have_content "NEXT"
-    page.find("textarea").fill_in(with: "Matt")
-    expect(page).to have_content "CORRECT"
-    expect(page).to have_content('NEXT')
-    page.find("[data-test-next]").click
-    expect(page).to have_content 'This is round 2'
-    expect(page.find("textarea").value).to eq ""
+    Then 'the game commences' do
+      expect(page).to have_content 'This is round 1'
+      expect(page).to have_selector('img')
+      expect(page).to have_selector('textarea')
+      page.find("textarea").fill_in(with: "Michael")
+      expect(page).to_not have_content "CORRECT"
+      expect(page).to_not have_content "NEXT"
+      page.find("textarea").fill_in(with: "Matt")
+      expect(page).to have_content "CORRECT"
+      expect(page).to have_content('NEXT')
+      page.find("[data-test-next]").click
+      expect(page).to have_content 'This is round 2'
+      expect(page.find("textarea").value).to eq ""
+    end
   end
 
   context 'Guess name given data for Keith' do

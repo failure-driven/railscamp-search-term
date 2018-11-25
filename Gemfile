@@ -58,6 +58,9 @@ group :test do
   # Easy installation and use of chromedriver to run system tests with Chrome
   gem 'chromedriver-helper'
   gem 'rspec-rails'
+
+  gem 'rspec-example_steps'
+  gem 'rspec-wait'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
