@@ -1,20 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders a status 1`] = `
-<Fragment>
-  <div
-    className="status"
-  />
-  <h2>
-    This is round 1
-  </h2>
-  <img
-    src="http://localhost:5000/8e85e82e854.gif"
-  />
-  <textarea />
-</Fragment>
-`;
-
 exports[`renders img 1`] = `
 <Fragment>
   <div
@@ -26,7 +11,9 @@ exports[`renders img 1`] = `
   <img
     src="http://localhost:5000/8e85e82e854.gif"
   />
-  <textarea />
+  <textarea
+    onChange={[Function]}
+  />
 </Fragment>
 `;
 
@@ -41,7 +28,9 @@ exports[`renders renders a text area 1`] = `
   <img
     src="http://localhost:5000/8e85e82e854.gif"
   />
-  <textarea />
+  <textarea
+    onChange={[Function]}
+  />
 </Fragment>
 `;
 
@@ -56,6 +45,8 @@ exports[`renders round one message 1`] = `
   <img
     src="http://localhost:5000/8e85e82e854.gif"
   />
-  <textarea />
+  <textarea
+    onChange={[Function]}
+  />
 </Fragment>
 `;

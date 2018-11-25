@@ -24,6 +24,9 @@ it('renders renders a text area', () => {
 
 it('renders a status', () => {
   const wrapper = shallow(<Round />);
-  expect(wrapper.find('.status').exists()).toBe(true);
-  expect(shallowToJson(wrapper)).toMatchSnapshot();
+  expect(wrapper.find('.status').text()).toEqual('');
+
+  wrapper.find('textarea').simulate('change', { target: { value: 'matt' }});
+
+  expect(wrapper.find('.status').text()).toEqual('CORRECT');
 });
