@@ -1,0 +1,2 @@
+class NamedImage < ApplicationRecord
+end

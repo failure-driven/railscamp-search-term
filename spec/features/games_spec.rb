@@ -14,4 +14,19 @@ RSpec.feature "Games", type: :feature, js: true do
     page.find("textarea").fill_in(with: "Matt")
     expect(page).to have_content "CORRECT"
   end
+
+  context 'Guess name given data for Keith' do
+    before do
+      NamedImage.create!(name: "Keith", image_path: "/keith_image.gif")
+    end
+
+    scenario 'Playing the first turn' do
+      pending
+      visit '/'
+      expect(page).to have_content 'Welcome to the Game'
+
+      page.find('[data-start-button]').click
+      expect(page.find("img")[:src]).to eq("http://localhost:5000/keith_image.gif")
+    end
+  end
 end
