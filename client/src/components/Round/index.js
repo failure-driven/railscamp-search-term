@@ -13,8 +13,12 @@ class Round extends Component {
     this.handleGuess = this.handleGuess.bind(this);
   }
 
-  handleGuess() {
-    this.setState({ status: 'CORRECT' });
+  handleGuess(event) {
+    console.log(event)
+    if (event.target.value === 'matt') {
+      this.setState({ status: 'CORRECT' });
+    }
+
   }
 
   render() {

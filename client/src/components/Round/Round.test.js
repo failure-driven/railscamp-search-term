@@ -26,6 +26,10 @@ it('renders a status', () => {
   const wrapper = shallow(<Round />);
   expect(wrapper.find('.status').text()).toEqual('');
 
+  wrapper.find('textarea').simulate('change', { target: { value: 'michael' }});
+
+  expect(wrapper.find('.status').text()).toEqual('');
+
   wrapper.find('textarea').simulate('change', { target: { value: 'matt' }});
 
   expect(wrapper.find('.status').text()).toEqual('CORRECT');
