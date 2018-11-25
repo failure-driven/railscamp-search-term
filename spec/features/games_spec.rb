@@ -13,7 +13,5 @@ RSpec.feature "Games", type: :feature, js: true do
     expect(page).to_not have_content "CORRECT"
     page.find("textarea").fill_in(with: "matt")
     expect(page).to have_content "CORRECT"
-
   end
 end
-

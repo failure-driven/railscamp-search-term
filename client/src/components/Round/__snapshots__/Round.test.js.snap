@@ -12,6 +12,7 @@ exports[`renders img 1`] = `
     src="http://localhost:5000/8e85e82e854.gif"
   />
   <textarea
+    autofocus="true"
     onChange={[Function]}
   />
 </Fragment>
@@ -29,6 +30,7 @@ exports[`renders renders a text area 1`] = `
     src="http://localhost:5000/8e85e82e854.gif"
   />
   <textarea
+    autofocus="true"
     onChange={[Function]}
   />
 </Fragment>
@@ -46,6 +48,7 @@ exports[`renders round one message 1`] = `
     src="http://localhost:5000/8e85e82e854.gif"
   />
   <textarea
+    autofocus="true"
     onChange={[Function]}
   />
 </Fragment>

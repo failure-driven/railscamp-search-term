@@ -18,7 +18,6 @@ class Round extends Component {
     if (event.target.value === 'matt') {
       this.setState({ status: 'CORRECT' });
     }
-
   }
 
   render() {
@@ -27,7 +26,7 @@ class Round extends Component {
       <div className='status'>{this.state.status}</div>
       <h2>This is round 1</h2>
       <img src="http://localhost:5000/8e85e82e854.gif"/>
-      <textarea onChange={this.handleGuess}>
+      <textarea autofocus="true" onChange={this.handleGuess}>
       </textarea>
     </>
     );

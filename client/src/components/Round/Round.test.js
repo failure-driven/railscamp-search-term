@@ -19,6 +19,7 @@ it('renders img', () => {
 it('renders renders a text area', () => {
   const wrapper = shallow(<Round />);
   expect(wrapper.find('textarea').exists()).toBe(true);
+  expect(wrapper.find('textarea').prop('autofocus')).toEqual('true');
   expect(shallowToJson(wrapper)).toMatchSnapshot();
 });
 
