@@ -17,6 +17,7 @@ RSpec.feature "Games", type: :feature, js: true do
     expect(page).to have_content('NEXT')
     page.find("[data-test-next]").click
     expect(page).to have_content 'This is round 2'
+    expect(page.find("textarea").value).to eq ""
   end
 
   context 'Guess name given data for Keith' do
