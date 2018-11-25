@@ -32,3 +32,6 @@
 
 # No idea
 .idea
+
+# generic git commit messages are local only
+.gitmessage
