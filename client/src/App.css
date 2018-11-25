@@ -22,6 +22,17 @@
   color: #61dafb;
 }
 
+.werewolf-guess {
+  width: 320px;
+  height: 100px;
+  font-size: 20px;
+  font-weight: bolder;
+}
+
+.werewolf-guess::placeholder{
+  color: #DADADA;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

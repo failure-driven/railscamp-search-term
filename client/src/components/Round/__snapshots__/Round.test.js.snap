@@ -22,8 +22,10 @@ exports[`renders img 1`] = `
   />
   <textarea
     autoFocus={true}
+    className="werewolf-guess"
     disabled={false}
     onChange={[Function]}
+    placeholder="Enter the werewolf's name"
     value=""
   />
 </Fragment>
@@ -51,8 +53,10 @@ exports[`renders renders a text area 1`] = `
   />
   <textarea
     autoFocus={true}
+    className="werewolf-guess"
     disabled={false}
     onChange={[Function]}
+    placeholder="Enter the werewolf's name"
     value=""
   />
 </Fragment>
@@ -80,8 +84,10 @@ exports[`renders round one message 1`] = `
   />
   <textarea
     autoFocus={true}
+    className="werewolf-guess"
     disabled={false}
     onChange={[Function]}
+    placeholder="Enter the werewolf's name"
     value=""
   />
 </Fragment>

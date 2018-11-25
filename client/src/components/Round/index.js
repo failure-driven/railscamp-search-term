@@ -78,7 +78,7 @@ class Round extends Component {
           (besides Michael and Selena)</p>
       <div>{this.state.timer > 0 ? ('' + this.state.timer + ' sec left') : 'boom'}</div>
       <img src="http://localhost:5000/8e85e82e854.gif"/>
-      <textarea ref={el => this.textarea = el} onChange={this.handleGuess} value={this.state.guess} disabled={this.state.status === 'CORRECT'} autoFocus={true}>
+      <textarea className='werewolf-guess' placeholder="Enter the werewolf's name" ref={el => this.textarea = el} onChange={this.handleGuess} value={this.state.guess} disabled={this.state.status === 'CORRECT'} autoFocus={true}>
       </textarea>
       { (this.state.status === 'CORRECT') ?
         <Link to={`/rounds/${this.state.round + 1}`} data-test-next>NEXT</Link> : ''}
