@@ -81,7 +81,7 @@ class Round extends Component {
       <textarea className='werewolf-guess' placeholder="Enter the werewolf's name" ref={el => this.textarea = el} onChange={this.handleGuess} value={this.state.guess} disabled={this.state.status === 'CORRECT'} autoFocus={true}>
       </textarea>
       { (this.state.status === 'CORRECT') ?
-        <Link to={`/rounds/${this.state.round + 1}`} data-test-next>NEXT</Link> : ''}
+        <Link to={`/rounds/${this.state.round + 1}`} data-test-next>NEXT</Link> : <span>NEXT</span>}
     </>
     );
   }

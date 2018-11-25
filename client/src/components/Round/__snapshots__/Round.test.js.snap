@@ -28,6 +28,9 @@ exports[`renders img 1`] = `
     placeholder="Enter the werewolf's name"
     value=""
   />
+  <span>
+    NEXT
+  </span>
 </Fragment>
 `;
 
@@ -59,6 +62,9 @@ exports[`renders renders a text area 1`] = `
     placeholder="Enter the werewolf's name"
     value=""
   />
+  <span>
+    NEXT
+  </span>
 </Fragment>
 `;
 
@@ -90,5 +96,8 @@ exports[`renders round one message 1`] = `
     placeholder="Enter the werewolf's name"
     value=""
   />
+  <span>
+    NEXT
+  </span>
 </Fragment>
 `;
