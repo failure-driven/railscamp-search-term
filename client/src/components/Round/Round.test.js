@@ -3,6 +3,7 @@ import Round from './';
 import {shallow} from 'enzyme';
 import {shallowToJson} from 'enzyme-to-json';
 import { Link } from 'react-router-dom';
+import ReactDOM from 'react-dom';
 
 it('renders round one message', () => {
   const wrapper = shallow(<Round match={{ params: { round: 1 } }} />);
@@ -20,8 +21,21 @@ it('renders img', () => {
 it('renders renders a text area', () => {
   const wrapper = shallow(<Round match={{ params: { round: 1 } }} />);
   expect(wrapper.find('textarea').exists()).toBe(true);
-  expect(wrapper.find('textarea').prop('autofocus')).toEqual('true');
+  expect(wrapper.find('textarea').prop('autoFocus')).toEqual('true');
   expect(shallowToJson(wrapper)).toMatchSnapshot();
+});
+
+// TODO how do we test focus
+it.skip('focuses on the text area when it is the next round', () => {
+  const div = document.createElement('div');
+  const wrapper = ReactDOM.render(<Round match={{ params: { round: 1 } }} />, div);
+  expect(wrapper.find('textarea').prop('autofocus')).toEqual('true');
+
+  wrapper.find('textarea').simulate('change', { target: { value: 'matt' }});
+  expect(wrapper.find('textarea:disabled').exists()).toBe(true);
+  wrapper.find('[data-test-next]').simulate("click");
+
+  expect(wrapper.find('textarea').prop('autofocus')).toEqual('true');
 });
 
 describe('guess comparator module', () => {

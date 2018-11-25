@@ -13,7 +13,8 @@ exports[`renders img 1`] = `
     src="http://localhost:5000/8e85e82e854.gif"
   />
   <textarea
-    autofocus="true"
+    autoFocus="true"
+    disabled={false}
     onChange={[Function]}
     value=""
   />
@@ -33,7 +34,8 @@ exports[`renders renders a text area 1`] = `
     src="http://localhost:5000/8e85e82e854.gif"
   />
   <textarea
-    autofocus="true"
+    autoFocus="true"
+    disabled={false}
     onChange={[Function]}
     value=""
   />
@@ -53,7 +55,8 @@ exports[`renders round one message 1`] = `
     src="http://localhost:5000/8e85e82e854.gif"
   />
   <textarea
-    autofocus="true"
+    autoFocus="true"
+    disabled={false}
     onChange={[Function]}
     value=""
   />

@@ -37,7 +37,7 @@ class Round extends Component {
       <div className='status'>{this.state.status}</div>
       <h2>This is round {this.state.round}</h2>
       <img src="http://localhost:5000/8e85e82e854.gif"/>
-      <textarea autofocus="true" onChange={this.handleGuess} value={this.state.guess}>
+      <textarea autoFocus="true" onChange={this.handleGuess} value={this.state.guess} disabled={this.state.status === 'CORRECT'}>
       </textarea>
       { (this.state.status === 'CORRECT') ?
         <Link to={`/rounds/${this.state.round + 1}`} data-test-next>NEXT</Link> : ''}
